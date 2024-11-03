@@ -3,6 +3,6 @@
     "version": "1.0",
     "author": "Enndy1005",
     "description": "Модуль для проверки пинга",
-    "servers": ["https://raw.githubusercontent.com/Enndy1005/tera-pinger-module/main/manifest.json"]
+    "servers": ["https://raw.githubusercontent.com/Enndy1005/tera-pinger-module/"]
   }
   
