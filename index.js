@@ -97,7 +97,7 @@ module.exports = function pinger(mod) {
 		if (pingValue < 70) color = '00FF00';  // Зеленый для пинга ниже 70 мс.
 		else if (pingValue >= 70 && pingValue < 100) color = 'CCFF33';  // Светло-зеленый для пинга от 70 до 100 мс.
 		else if (pingValue >= 100 && pingValue < 200) color = 'FFFF00';  // Желтый для пинга от 100 до 200 мс.
-		else color = 'FF0000';  // Красный для пинга выше 200 мс.
+		else color = 'FF4500';  // Красный для пинга выше 200 мс.
 		
 		mod.send('S_PRIVATE_CHAT', 1, {
 			channel: channelId,  
