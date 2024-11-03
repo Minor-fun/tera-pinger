@@ -1,10 +1,12 @@
-Описание модуля.
+Описание модуля / Description of the module
 
-Модуль для отображения текущего пинга в игре.
+Модуль для отображения текущего пинга в игре / Module for displaying the current ping in the game
 
 ![image](https://github.com/user-attachments/assets/acae9422-dd99-4ea0-bfe8-ff8ed7cc6df0)
 
+Команды /Commands
 
+/8 pinger - вкл/откл модуля / on/off module
 
 
 Important note for NGSP users for correct display of ping values ​​it is necessary to set in the NGSP settings (command "ngsp ui" in the toolbox channel) in the line "Ping method" => "based on win", then restart the toolbox.
