@@ -1,8 +1,13 @@
 {
     "name": "tera-pinger-module",
-    "version": "1.0",
+    "version": "16/11/2024",
     "author": "Enndy1005",
-    "description": "Модуль для проверки пинга",
-    "servers": ["https://raw.githubusercontent.com/Enndy1005/tera-pinger-module/master/"]
-  }
-  
+    "description": "Module for displaying current ping",
+    "servers": ["https://raw.githubusercontent.com/Enndy1005/tera-pinger-module/master/"],
+    "options": {
+        "settingsVersion": 1,
+        "settingsFile": "config.json",
+        "settingsMigrator": "settings_migrator.js"
+    },
+    "disableAutoUpdate": false
+}
