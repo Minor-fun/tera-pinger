@@ -75,7 +75,7 @@ module.exports = function pinger(mod) {
         
     mod.command.add(['pinger'], () => {
         enabled = !enabled;
-        mod.command.message('Pinger ' + (enabled ? <font color="#56B4E9">${langStrings.pingEnabled}</font> : <font color="#E69F00">${langStrings.pingDisabled}</font>));
+        mod.command.message('Pinger ' + (enabled ? `<font color="#56B4E9">${langStrings.pingEnabled}</font>` : `<font color="#E69F00">${langStrings.pingDisabled}</font>`));
         console.log('Pinger ' + (enabled ? langStrings.pingEnabled : langStrings.pingDisabled));
         if (enabled) pingcheck();  
         else {
@@ -126,7 +126,7 @@ module.exports = function pinger(mod) {
             channel: channelId,  
             authorID: 0,
             authorName: '',
-            message: <font color="#${color}"> ${pingValue} ${unit}</font>  
+            message: `<font color="#${color}"> ${pingValue} ${unit}</font>`  
         });
     }
         
