@@ -1,13 +1,16 @@
-***Описание модуля / Description of the module***
 
-Модуль для отображения текущего пинга в игре / Module for displaying the current ping in the game
+--- | ---
+***Описание модуля*** | ***Description of the module***
+
+--- | ---
+**Модуль для отображения текущего пинга в игре** | **Module for displaying the current ping in the game**
 
 ![image](https://github.com/user-attachments/assets/acae9422-dd99-4ea0-bfe8-ff8ed7cc6df0)
 
 ____________________________________________________________________________________________________________________________________________________________________________
 
 ## Команды /Commands
-Toolbox(/8) | Hotkey | Command description | Описание
+Toolbox(/8) | Hotkey | Description | Описание
 --- | --- | --- | ---
 pinger info |  | Show information about available commands and the current hotkey | Показать информацию о доступных командах и текущей горячей клавише
 pinger toggle | default Ctrl+Shift+P | on/off module | вкл/откл модуля 
