@@ -11,7 +11,7 @@ Toolbox(/8) | Hotkey | Command description | Описание
 --- | --- | --- | ---
 pinger info |  | Show information about available commands and the current hotkey | Показать информацию о доступных командах и текущей горячей клавише
 pinger toggle | default Ctrl+Shift+P | on/off module | вкл/откл модуля 
-pinger hotkey [ ] |  | hotkey to turn on/off the module | хоткей для вкл/откл модуля 
+pinger hotkey [ ] |  | hotkey to turn on/off the module | хоткей для вкл/откл модуля
 ____________________________________________________________________________________________________________________________________________________________________________
 
 Important note for NGSP users for correct display of ping values ​​it is necessary to set in the NGSP settings (command "ngsp ui" in the toolbox channel) in the line "Ping method" => "based on win", then restart the toolbox.
