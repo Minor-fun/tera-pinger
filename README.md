@@ -1,9 +1,7 @@
 
 ***Описание модуля*** | ***Description of the module***
 --- | ---
-
 **Модуль для отображения текущего пинга в игре** | **Module for displaying the current ping in the game**
---- | ---
 
 ![image](https://github.com/user-attachments/assets/acae9422-dd99-4ea0-bfe8-ff8ed7cc6df0)
 
