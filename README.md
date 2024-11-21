@@ -14,13 +14,14 @@ Toolbox(/8) | Hotkey | Description | Описание
 --- | --- | --- | ---
 pinger info |  | Show information about available commands and the current hotkey | Показать информацию о доступных командах и текущей горячей клавише
 pinger toggle | default Ctrl+Shift+P | on/off module | вкл/откл модуля 
-pinger hotkey [ ] |  | hotkey to turn on/off the module | хоткей для вкл/откл модуля
+pinger hotkey [ ] |  | Hotkey to turn on/off the module | Хоткей для вкл/откл модуля
+pinger color | | Toggle colored output for ping values | Переключает цветной вывод значений пинга
 ____________________________________________________________________________________________________________________________________________________________________________
 
-Important note for NGSP users for correct display of ping values ​​it is necessary to set in the NGSP settings (command "ngsp ui" in the toolbox channel) in the line "Ping method" => "based on win", then restart the toolbox.
+Important note for NGSP users for correct display of ping values ​​it is necessary to set in the NGSP settings (command "ngsp ui" in the toolbox channel) in the line "Ping method" => "based on win", then restart the toolbox. | Важная заметка для пользователей NGSP для корректного отображения значений пинга, нужно в настройках NGSP(команда "ngsp ui" в канале тулбокса) установить в строке "Метод проверки пинга" => "только внешняя утилита", затем перезапустить тулбокс.
+--- | ---
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/07a7a038-9756-4a8e-b283-b04b2ab9beab" alt="Описание изображения">
 </p>
 
-Важная заметка для пользователей NGSP для корректного отображения значений пинга, нужно в настройках NGSP(команда "ngsp ui" в канале тулбокса) установить в строке "Метод проверки пинга" => "только внешняя утилита", затем перезапустить тулбокс.
