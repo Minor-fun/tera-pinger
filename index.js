@@ -11,7 +11,7 @@ module.exports = function pinger(mod) {
     let pingInProgress = false;
     const commandsInfo = {
         "pinger toggle": "Enable or disable the pinger module.",
-        "pinger hotkey [hotkey]": "Set a hotkey to enable or disable the module.",
+        "pinger hotkey [hotkey]": "Set your hotkey to enable or disable the module.",
         "pinger color": "Toggle colored output for ping values.",
         "pinger info": "Show information about available commands and the current hotkey."
     };
@@ -22,11 +22,10 @@ module.exports = function pinger(mod) {
                 globalShortcut.unregister(hotkey);
             }
             globalShortcut.register(hotkey, () => {
-                mod.command.exec('pinger toggle');  // Выполнение команды pinger.
+                mod.command.exec('pinger toggle');
             });
-            mod.command.message(`Hotkey ${hotkey} registered for pinger command.`);
         } catch (e) {
-            mod.command.message(`Failed to register hotkey ${hotkey}: ${e.message}`);
+            mod.command.message(`Failed to register hotkey <font color="#FF4500">${hotkey}</font>: ${e.message}`);
         }
     }
 
@@ -44,8 +43,19 @@ module.exports = function pinger(mod) {
             name: "Ping"
         });
         if (mod.settings.enabled) pingcheck();
+            
+        let infoMessage = "Pinger module loaded. Available commands:\n";
+        for (const [command, description] of Object.entries(commandsInfo)) {
+            infoMessage += `-<font color="#00FF00"> ${command}</font>: ${description}\n`;
+        }
+        infoMessage += `\nCurrent hotkey: ${
+            mod.settings.hotkey 
+                ? `<font color="#00FF00">${mod.settings.hotkey}</font>` 
+                : `<font color="#FF4500">not installed</font>`
+        }`;
+        mod.command.message(infoMessage);
     });
-
+    
     mod.hook('S_JOIN_PRIVATE_CHANNEL', 2, event => {
         if (event.index === channelIndex) return false;
     });
@@ -76,7 +86,7 @@ module.exports = function pinger(mod) {
                 const enabled = mod.settings.enabled = !mod.settings.enabled;
                 mod.saveSettings();
                 if (enabled) {
-                    pingInProgress = false;  // Сброс состояния
+                    pingInProgress = false;
                     pingcheck();
                 } else {
                     mod.clearTimeout(timeout);
@@ -88,7 +98,7 @@ module.exports = function pinger(mod) {
             case 'hotkey':
                 const hotkey = args.join(" ");
                 if (!hotkey) {
-                    mod.command.message(`Current hotkey: ${mod.settings.hotkey}`);
+                    mod.command.message(`Current hotkey: <font color="#00FF00">${mod.settings.hotkey}</font>`);
                 } else {
                     if (hotkey.toLowerCase() !== mod.settings.hotkey.toLowerCase()) {
                         const formattedHotkey = hotkey.toLowerCase().split("+").map(w => w[0].toUpperCase() + w.substr(1)).join("+");
@@ -96,9 +106,9 @@ module.exports = function pinger(mod) {
                             registerHotkey(formattedHotkey);
                             mod.settings.hotkey = formattedHotkey;
                             mod.saveSettings();
-                            mod.command.message(`New hotkey: ${mod.settings.hotkey}`);
+                            mod.command.message(`New hotkey: <font color="#00FF00">${mod.settings.hotkey}</font>`);
                         } catch (e) {
-                            mod.command.message(`Invalid hotkey: ${hotkey}`);
+                            mod.command.message(`Invalid hotkey: <font color="#FF4500">${hotkey}</font>`);
                         }
                     }
                 }
@@ -113,20 +123,26 @@ module.exports = function pinger(mod) {
             case 'info':
                 let infoMessage = "Available commands:\n";
                 for (const [command, description] of Object.entries(commandsInfo)) {
-                    infoMessage += `- ${command}: ${description}\n`;
+                    infoMessage += `-<font color="#00FF00"> ${command}</font>: ${description}\n`;
                 }
-                infoMessage += `\nCurrent hotkey: ${mod.settings.hotkey || 'not installed'}`;
+                infoMessage += `\nCurrent hotkey: ${
+                    mod.settings.hotkey 
+                        ? `<font color="#00FF00">${mod.settings.hotkey}</font>` 
+                        : `<font color="#FF4500">not installed</font>`
+                }`;
+                
                 mod.command.message(infoMessage);
                 break;
 
             default:
-                mod.command.message("Unknown subcommand. Use 'pinger info' to see available commands.");
+                mod.command.message("Unknown subcommand. Use '<font color=\"#00FF00\">pinger info</font>' to see available commands.");
+
                 break;
         }
     });
 
     function ping() {
-        if (pingInProgress) return;  // Предотвращаем перекрытие вызовов ping()
+        if (pingInProgress) return;
         pingInProgress = true;
         mod.send('C_REQUEST_GAMESTAT_PING', 1);
         lastSent = Date.now();
