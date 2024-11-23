@@ -14,7 +14,7 @@ Toolbox(/8) | Hotkey | Description | Описание
 --- | --- | --- | ---
 pinger info |  | Show information about available commands and the current hotkey | Показать информацию о доступных командах и текущей горячей клавише
 pinger toggle | default Ctrl+Shift+P | on/off module | вкл/откл модуля 
-pinger hotkey [ ] |  | Hotkey to turn on/off the module | Хоткей для вкл/откл модуля
+pinger hotkey [ ] |  | Command to set your hotkey | Команда для установки вашей горячей клавиши
 pinger color | | Toggle colored output for ping values | Переключает цветной вывод значений пинга
 ____________________________________________________________________________________________________________________________________________________________________________
 
