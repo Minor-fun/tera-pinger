@@ -154,7 +154,6 @@ module.exports = function pinger(mod) {
 
     function pingcheck() {
         if (mod.settings.enabled) {            
-            ping();
             hook('S_SPAWN_ME', 'raw', () => {
                 mod.clearTimeout(timeout);
                 timeout = mod.setTimeout(() => {
