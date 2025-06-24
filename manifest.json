@@ -1,8 +1,21 @@
 {
     "files": {
         "README.md": "8c42d8fbed8244faf25bae6d3abac27385833f57398263ecd3cdae523f2b0185",
-        "index.js": "0772e2ea45c6cab06d07bd27d50114656c2d0337ef8bbefbc2b6be320b09bc4e",        
+        "index.js": "7c1a4af9c9ed777d4de40629268229449a6c1d45d5dd323e02508a910278d720",
+        "module.config.json": "c0a16dfca2dc00eb2f4c5670a98fcc163fd4f85c34b04fe825e6c3e79de88ca1",
         "module.json": "288d9d71168d000d2dfd925dfab76b3ed89a76a449e639f46de1a71fcf775295",
         "settings_migrator.js": "f7f192cb05bad9e401bbc37fe0640aa6ef17618b8643b6f9160c1883e33543f0"
+    },
+    "defs": {
+        "C_CHAT": 1,
+        "C_LEAVE_PRIVATE_CHANNEL": 1,
+        "C_REQUEST_GAMESTAT_PING": [1,"raw"],
+        "C_REQUEST_PRIVATE_CHANNEL_INFO": 2,
+        "S_JOIN_PRIVATE_CHANNEL": 2,
+        "S_LOGIN": "raw",
+        "S_PRIVATE_CHAT": 1,
+        "S_REQUEST_PRIVATE_CHANNEL_INFO": 2,
+        "S_RESPONSE_GAMESTAT_PONG": "raw",
+        "S_SPAWN_ME": "raw"
     }
 }
