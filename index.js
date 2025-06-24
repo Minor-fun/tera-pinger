@@ -16,7 +16,7 @@ module.exports = function pinger(mod) {
         "pinger info": "Show information about available commands and the current hotkey."
     };
 
-    function registerHotkey(hotkey) {
+    function registerHotkey(hotkey) {        
         try {
             if (globalShortcut.isRegistered(hotkey)) {
                 globalShortcut.unregister(hotkey);
