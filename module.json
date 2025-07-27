@@ -1,13 +1,14 @@
 {
-    "name": "tera-pinger-module",
-    "version": "18/11/2024",
-    "author": "Enndy1005",
-    "description": "Module for displaying current ping",
-    "servers": ["https://raw.githubusercontent.com/Enndy1005/tera-pinger-module/master/"],
+    "name": "pinger",
+    "author": "hyacinth/Enndy1005",
+    "description": "在游戏聊天频道显示ping值，并提供自动启用选项",
+    "version": "7/28/2025",
     "options": {
+        "niceName": "Ping显示",
         "settingsVersion": 1,
         "settingsFile": "config.json",
         "settingsMigrator": "settings_migrator.js"
     },
+    "servers": ["https://raw.githubusercontent.com/minor-fun/tera-pinger/master/"],
     "disableAutoUpdate": false
 }
