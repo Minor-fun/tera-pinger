@@ -2,7 +2,7 @@
     "name": "pinger",
     "author": "hyacinth/Enndy1005",
     "description": "在游戏聊天频道显示ping值，并提供自动启用选项",
-    "version": "7/28/2025",
+    "version": "8/15/2025",
     "options": {
         "niceName": "Ping显示",
         "settingsVersion": 1,

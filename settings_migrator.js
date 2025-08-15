@@ -1,6 +1,7 @@
 'use strict';
 
 const DefaultSettings = {
+    language: 'en',
     enabled: true,
     coloredOutput: true,
     hotkey: "Ctrl+P",
